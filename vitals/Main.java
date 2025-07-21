@@ -1,18 +1,17 @@
 package vitals;
 
 public class Main {
+    
     static boolean batteryIsOk(float temperature, float soc, float chargeRate) {
          return isTemperatureOk() && isSocOk() && isChargeRateOk();
     }
-
+    
     private boolean isTemperatureOk() {
         return temperature >= 0 && temperature <= 45;
     }
-
     private boolean isSocOk() {
         return soc >= 20 && soc <= 80;
     }
-
     private boolean isChargeRateOk() {
         return chargeRate <= 0.8;
     }
